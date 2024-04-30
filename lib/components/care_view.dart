@@ -1,7 +1,6 @@
 // ignore_for_file: no_leading_underscores_for_local_identifiers
 
 import 'package:flutter/material.dart';
-import 'package:google_fonts/google_fonts.dart';
 
 class CareView extends StatelessWidget {
   final AnimationController animationController;
@@ -86,8 +85,7 @@ class CareView extends StatelessWidget {
                 child: SlideTransition(
                   position: _imageSecondHalfAnimation,
                   child: Container(
-                    constraints:
-                        const BoxConstraints(maxWidth: 350, maxHeight: 250),
+                    constraints: const BoxConstraints(maxWidth: 350, maxHeight: 250),
                     child: Image.asset(
                       'assets/introduction_animation/care_image.png',
                       fit: BoxFit.contain,
@@ -99,25 +97,19 @@ class CareView extends StatelessWidget {
                 position: _relaxFirstHalfAnimation,
                 child: SlideTransition(
                   position: _relaxSecondHalfAnimation,
-                  child: Text(
+                  child: const Text(
                     "Care",
-                    style: GoogleFonts.roboto(
-                      textStyle: Theme.of(context).textTheme.displayLarge,
-                      fontSize: 25,
-                      fontWeight: FontWeight.bold,
-                    ),
+                    style:
+                        TextStyle(fontSize: 26.0, fontWeight: FontWeight.bold),
                   ),
                 ),
               ),
-              Padding(
-                padding: const EdgeInsets.only(
-                    left: 64, right: 64, bottom: 16, top: 16),
+              const Padding(
+                padding:
+                    EdgeInsets.only(left: 64, right: 64, bottom: 16, top: 16),
                 child: Text(
                   "Lorem ipsum dolor sit amet,consectetur adipiscing elit,sed do eiusmod tempor incididunt ut labore",
                   textAlign: TextAlign.center,
-                  style: GoogleFonts.roboto(
-                    textStyle: Theme.of(context).textTheme.bodyMedium,
-                  ),
                 ),
               ),
             ],

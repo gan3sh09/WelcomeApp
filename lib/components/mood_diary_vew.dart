@@ -1,7 +1,6 @@
 // ignore_for_file: no_leading_underscores_for_local_identifiers
 
 import 'package:flutter/material.dart';
-import 'package:google_fonts/google_fonts.dart';
 
 class MoodDiaryVew extends StatelessWidget {
   final AnimationController animationController;
@@ -81,27 +80,20 @@ class MoodDiaryVew extends StatelessWidget {
           child: Column(
             mainAxisAlignment: MainAxisAlignment.center,
             children: [
-              Text(
+              const Text(
                 "Mood Dairy",
-                style: GoogleFonts.roboto(
-                  textStyle: Theme.of(context).textTheme.displayLarge,
-                  fontSize: 25,
-                  fontWeight: FontWeight.bold,
-                ),
+                style: TextStyle(fontSize: 26.0, fontWeight: FontWeight.bold),
               ),
               SlideTransition(
                 position: _moodFirstHalfAnimation,
                 child: SlideTransition(
                   position: _moodSecondHalfAnimation,
-                  child: Padding(
-                    padding: const EdgeInsets.only(
+                  child: const Padding(
+                    padding: EdgeInsets.only(
                         left: 64, right: 64, top: 16, bottom: 16),
                     child: Text(
                       "Lorem ipsum dolor sit amet,consectetur adipiscing elit,sed do eiusmod tempor incididunt ut labore",
                       textAlign: TextAlign.center,
-                      style: GoogleFonts.roboto(
-                        textStyle: Theme.of(context).textTheme.bodyMedium,
-                      ),
                     ),
                   ),
                 ),
@@ -111,8 +103,7 @@ class MoodDiaryVew extends StatelessWidget {
                 child: SlideTransition(
                   position: _imageSecondHalfAnimation,
                   child: Container(
-                    constraints:
-                        const BoxConstraints(maxWidth: 350, maxHeight: 250),
+                    constraints: const BoxConstraints(maxWidth: 350, maxHeight: 250),
                     child: Image.asset(
                       'assets/introduction_animation/mood_dairy_image.png',
                       fit: BoxFit.contain,

@@ -2,15 +2,12 @@
 
 import 'package:animations/animations.dart';
 import 'package:flutter/material.dart';
-import 'package:google_fonts/google_fonts.dart';
 
 class CenterNextButton extends StatelessWidget {
   final AnimationController animationController;
   final VoidCallback onNextClick;
   const CenterNextButton(
-      {super.key,
-      required this.animationController,
-      required this.onNextClick});
+      {super.key, required this.animationController, required this.onNextClick});
 
   @override
   Widget build(BuildContext context) {
@@ -100,30 +97,21 @@ class CenterNextButton extends StatelessWidget {
                         ? InkWell(
                             key: const ValueKey('Sign Up button'),
                             onTap: onNextClick,
-                            child: Padding(
-                              padding: const EdgeInsets.only(
-                                  left: 16.0, right: 16.0),
+                            child: const Padding(
+                              padding: EdgeInsets.only(left: 16.0, right: 16.0),
                               child: Row(
                                 mainAxisAlignment:
                                     MainAxisAlignment.spaceBetween,
                                 children: [
                                   Text(
                                     'Sign Up',
-                                    /* style: TextStyle(
+                                    style: TextStyle(
                                       color: Colors.white,
                                       fontSize: 18,
-                                      fontWeight: FontWeight.w500,
-                                    ), */
-                                    style: GoogleFonts.roboto(
-                                      textStyle: Theme.of(context)
-                                          .textTheme
-                                          .bodyMedium,
-                                      fontSize: 18,
-                                      color: Colors.white,
                                       fontWeight: FontWeight.w500,
                                     ),
                                   ),
-                                  const Icon(Icons.arrow_forward_rounded,
+                                  Icon(Icons.arrow_forward_rounded,
                                       color: Colors.white),
                                 ],
                               ),
@@ -147,27 +135,22 @@ class CenterNextButton extends StatelessWidget {
             padding: const EdgeInsets.only(top: 8),
             child: SlideTransition(
               position: _loginTextMoveAnimation,
-              child: Row(
+              child: const Row(
                 mainAxisAlignment: MainAxisAlignment.center,
                 children: [
                   Text(
                     'Already have an account? ',
-                    /* style: TextStyle(
+                    style: TextStyle(
                       fontSize: 14,
-                      fontWeight: FontWeight.normal,
-                    ), */
-                    style: GoogleFonts.roboto(
-                      textStyle: Theme.of(context).textTheme.bodyMedium,
-                      fontSize: 14,
+                      fontWeight: FontWeight.w500,
                     ),
                   ),
                   Text(
                     'Login',
-                    style: GoogleFonts.roboto(
-                      textStyle: Theme.of(context).textTheme.bodyMedium,
+                    style: TextStyle(
+                      color: Color(0xff132137),
                       fontSize: 16,
                       fontWeight: FontWeight.bold,
-                      color: const Color(0xff132137),
                     ),
                   ),
                 ],

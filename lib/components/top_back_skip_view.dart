@@ -1,7 +1,6 @@
 // ignore_for_file: no_leading_underscores_for_local_identifiers
 
 import 'package:flutter/material.dart';
-import 'package:google_fonts/google_fonts.dart';
 
 class TopBackSkipView extends StatelessWidget {
   final AnimationController animationController;
@@ -72,12 +71,11 @@ class TopBackSkipView extends StatelessWidget {
                   position: _skipAnimation,
                   child: IconButton(
                     onPressed: onSkipClick,
-                    icon: Text(
+                    icon: const Text(
                       'Skip',
-                      style: GoogleFonts.roboto(
-                        textStyle: Theme.of(context).textTheme.bodyMedium,
+                      style: TextStyle(
                         fontSize: 16,
-                        color: const Color(0xff132137),
+                        color: Color(0xff132137),
                       ),
                     ),
                   ),

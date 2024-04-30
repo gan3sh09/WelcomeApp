@@ -1,4 +1,3 @@
-
 // ignore_for_file: avoid_print
 
 import 'package:flutter/material.dart';
@@ -9,7 +8,6 @@ import 'package:welcome_app/components/relax_view.dart';
 import 'package:welcome_app/components/splash_view.dart';
 import 'package:welcome_app/components/top_back_skip_view.dart';
 import 'package:welcome_app/components/welcome_view.dart';
-
 
 class IntroductionAnimationScreen extends StatefulWidget {
   const IntroductionAnimationScreen({super.key});

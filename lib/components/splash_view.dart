@@ -1,7 +1,6 @@
 // ignore_for_file: no_leading_underscores_for_local_identifiers
 
 import 'package:flutter/material.dart';
-import 'package:google_fonts/google_fonts.dart';
 
 class SplashView extends StatefulWidget {
   final AnimationController animationController;
@@ -37,26 +36,18 @@ class _SplashViewState extends State<SplashView> {
                 fit: BoxFit.cover,
               ),
             ),
-            Padding(
-              padding: const EdgeInsets.only(top: 8.0, bottom: 8.0),
+            const Padding(
+              padding: EdgeInsets.only(top: 8.0, bottom: 8.0),
               child: Text(
                 "Clearhead",
-                // style: TextStyle(fontSize: 25.0, fontWeight: FontWeight.bold),
-                style: GoogleFonts.roboto(
-                  textStyle: Theme.of(context).textTheme.displayLarge,
-                  fontSize: 25,
-                  fontWeight: FontWeight.bold,
-                ),
+                style: TextStyle(fontSize: 25.0, fontWeight: FontWeight.bold),
               ),
             ),
-            Padding(
-              padding: const EdgeInsets.only(left: 64, right: 64),
+            const Padding(
+              padding: EdgeInsets.only(left: 64, right: 64),
               child: Text(
                 "Lorem ipsum dolor sit amet,consectetur adipiscing elit,sed do eiusmod tempor incididunt ut labore",
                 textAlign: TextAlign.center,
-                style: GoogleFonts.roboto(
-                  textStyle: Theme.of(context).textTheme.bodyMedium,
-                ),
               ),
             ),
             const SizedBox(
@@ -81,13 +72,11 @@ class _SplashViewState extends State<SplashView> {
                     borderRadius: BorderRadius.circular(38.0),
                     color: const Color(0xff132137),
                   ),
-                  child: Text(
+                  child: const Text(
                     "Let's begin",
-                    style: GoogleFonts.roboto(
-                      textStyle: Theme.of(context).textTheme.bodyMedium,
+                    style: TextStyle(
                       fontSize: 18,
                       color: Colors.white,
-                      fontWeight: FontWeight.w500,
                     ),
                   ),
                 ),
